@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingTop="60dp"
+    android:paddingBottom="25dp"
+    android:paddingRight="25dp"
+    android:paddingLeft="25dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nasrf.todo.AddTask">
+    
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <TextView
+                android:text="Task Name: "
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            
+            <EditText
+                android:id="@+id/etTaskName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:paddingTop="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <TextView
+                android:text="Note:"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etTaskNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="4"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+           <EditText
+               android:layout_weight="1.4"
+               android:textSize="20dp"
+               android:hint="Start Date"
+               android:onClick="getStartDate"
+               android:id="@+id/btnStartDate"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:inputType="date"/>
+
+
+            <TextView
+                android:textColor="@android:color/background_dark"
+                android:layout_weight="1.2"
+                android:textSize="20dp"
+                android:text="to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_weight="1.4"
+                android:textSize="20dp"
+                android:hint="End Date"
+                android:onClick="getEndDate"
+                android:id="@+id/btnEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"/>
+
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="45dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:onClick="addTask"
+            android:layout_gravity="center"
+            android:text=" ADD Task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+</LinearLayout>
